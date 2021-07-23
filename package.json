@@ -1,0 +1,26 @@
+{
+  "name": "mysql_node_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simizzle/mysql_node_cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simizzle/mysql_node_cli/issues"
+  },
+  "homepage": "https://github.com/Simizzle/mysql_node_cli#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mysql2": "^2.2.5",
+    "yargs": "^17.0.1",
+    "start": "node src/app.js"
+  }
+}
