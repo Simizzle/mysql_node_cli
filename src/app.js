@@ -21,7 +21,7 @@ const app = () => {
     } else if (command === 'delete movie') {
         deleteMovie(title, user, pass)
     } else if (command === 'list movies');
-        moviesList(title, user, pass)
+        moviesList(user, pass)
 }
 
 app();

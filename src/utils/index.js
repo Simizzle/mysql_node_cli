@@ -59,12 +59,12 @@ exports.deleteMovie = (title, user, pass) => { // node src/app.js "delete movie"
 };
 
 exports.moviesList = async (username, pass) => {
+    console.log(username, pass)
     try {
         const user = [username, pass];
-        sql.query("SELECT title, actor, watched, rating, genre, director FROM movies INNER JOIN users ON users.id = movies.userID WHERE userID = (SELECT id FROM users INNER JOIN passwords ON users.id = passwords.userID WHERE users.username = ? AND passwords.pass = ?)", user, (error, result) 
-        => {
+        sql.query("SELECT title, actor, watched, rating, genre, director FROM movies WHERE userID = (SELECT id FROM users INNER JOIN passwords ON users.id = passwords.userID WHERE users.username = ? AND passwords.pass = ?)", user, (error, results) => {
             if (error) {console.error(error);
-            } console.log(result)})
+            } console.log(results)})
     } catch (error) {
         console.log(error)
     }
